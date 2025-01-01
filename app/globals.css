@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.indigo_gradient {
+    @apply bg-gradient-to-r from-indigo-500 via-indigo-950 to-violet-500 bg-clip-text text-transparent;
+}
