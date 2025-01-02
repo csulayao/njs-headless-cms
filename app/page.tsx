@@ -6,7 +6,7 @@ import CoverImage from "./cover-image";
 import Avatar from "./avatar";
 import MoreStories from "./more-stories";
 
-import { getAllPosts } from "@/lib/api";
+import { getAllMenuItems, getAllPosts } from "@/lib/api";
 import { CMS_NAME, CMS_URL } from "@/lib/constants";
 
 function Intro() {
@@ -16,7 +16,7 @@ function Intro() {
         Portfolia.
       </h1>
       <h2 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{" "}
+        Explore and Wonder{" "}
         <a
           href="https://nextjs.org/"
           className="underline hover:text-success duration-200 transition-colors"
@@ -81,6 +81,9 @@ export default async function Page() {
   const allPosts = await getAllPosts(isEnabled);
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+  const allMenu = await getAllMenuItems();
+  const allItems = allMenu
+  console.log(allItems)
 
   return (
     <div className="container mx-auto px-5">
