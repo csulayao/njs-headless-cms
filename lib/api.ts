@@ -55,12 +55,12 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
   ).then((response) => response.json());
 }
 
-//GET MENU ITEMS
+//GET MENU ITEMS API CALL
 async function fetchGraphQLMenu(query: string, preview = false): Promise<any> {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${
@@ -82,6 +82,12 @@ function extractPost(fetchResponse: any): any {
 function extractPostEntries(fetchResponse: any): any[] {
   return fetchResponse?.data?.postCollection?.items;
 }
+
+//EXTRACT MENU ENTRIES
+function extractMenuEntries(fetchResponse: any): any[] {
+  return fetchResponse?.data?.menuItemsCollection?.items;
+}
+
 
 export async function getPreviewPostBySlug(slug: string | null): Promise<any> {
   const entry = await fetchGraphQL(
@@ -111,6 +117,20 @@ export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
     isDraftMode,
   );
   return extractPostEntries(entries);
+}
+
+//GET ALL MENU ITEMS 
+export async function getAllMenuItems(): Promise<any[]> {
+  const entries = await fetchGraphQLMenu(
+    `query {
+      menuItemsCollection{
+        items {
+          ${GET_GRAPHQL_MENU}
+        }
+      }
+    }`
+  );
+  return extractMenuEntries(entries);
 }
 
 export async function getPostAndMorePosts(
