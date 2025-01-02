@@ -28,6 +28,19 @@ const POST_GRAPHQL_FIELDS = `
   }
 `;
 
+const GET_GRAPHQL_MENU =` 
+menuItemsCollection{
+    items {
+      navName
+      navLink
+      navImage{
+        url
+      }
+    }
+  }
+
+`
+
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
