@@ -29,16 +29,11 @@ const POST_GRAPHQL_FIELDS = `
 `;
 
 const GET_GRAPHQL_MENU =` 
-menuItemsCollection{
-    items {
-      navName
-      navLink
-      navImage{
-        url
-      }
-    }
+  navName
+  navLink
+  navImage{
+    url
   }
-
 `
 
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
@@ -56,6 +51,26 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
       },
       body: JSON.stringify({ query }),
       next: { tags: ["posts"] },
+    },
+  ).then((response) => response.json());
+}
+
+//GET MENU ITEMS
+async function fetchGraphQLMenu(query: string, preview = false): Promise<any> {
+  return fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${
+          preview
+            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+            : process.env.CONTENTFUL_ACCESS_TOKEN
+        }`,
+      },
+      body: JSON.stringify({ query }),
+      next: { tags: ["menuItems"] },
     },
   ).then((response) => response.json());
 }
