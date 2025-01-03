@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
@@ -27,4 +26,4 @@ const Footer = () => {
   );
 }
 
-export default Footer
+export default Footer;
