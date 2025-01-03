@@ -7,7 +7,7 @@ import Avatar from "./avatar";
 import MoreStories from "./more-stories";
 
 import { getAllMenuItems, getAllPosts } from "@/lib/api";
-import { CMS_NAME, CMS_URL } from "@/lib/constants";
+// import { CMS_NAME, CMS_URL } from "@/lib/constants";
 
 function Intro() {
   return (
@@ -25,10 +25,10 @@ function Intro() {
         </a>{" "}
         and{" "}
         <a
-          href={CMS_URL}
+          href=""// href={CMS_URL}
           className="underline hover:text-success duration-200 transition-colors"
         >
-          {CMS_NAME}
+          Contentful {/* {CMS_NAME} */}
         </a>
         .
       </h2>
