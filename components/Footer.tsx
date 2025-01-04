@@ -19,7 +19,7 @@ const Footer = () => {
         <Link href="https://github.com/csulayao" className="flex mr-10 mt-5" rel="noopener noreferrer" target="_blank"><Image src="https://portfolia-dusky.vercel.app/assets/icons/github.svg" alt="Github" width={30} height={30} className="mr-3" unoptimized={true} loader={() => "https://portfolia-dusky.vercel.app/assets/icons/github.svg"}/></Link>
         </div>
       {/* Mobile */}
-      {/* <div className="sm:hidden flex">
+      <div className="sm:hidden flex">
             <div className="w-full">
               <span className="w-full">&copy; D-Kolektiv, Inc. 2024 <br /><br />
               </span>
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="w-full">
                 <span className="text-xs">Logos and copyright used for reference belong to their respective brand owners.</span>
             </div>
-      </div> */}
+      </div>
     </footer>
   )
 }
