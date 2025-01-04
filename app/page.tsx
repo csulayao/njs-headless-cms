@@ -7,6 +7,7 @@ import Avatar from "./avatar";
 import MoreStories from "./more-stories";
 
 import { getAllMenuItems, getAllPosts } from "@/lib/api";
+import Feed from "@/components/Feed";
 // import { CMS_NAME, CMS_URL } from "@/lib/constants";
 
 function Intro() {
@@ -86,19 +87,16 @@ export default async function Page() {
   console.log(allItems)
 
   return (
-    <div className="container mx-auto px-5">
-      <Intro />
-      {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-      )}
-      <MoreStories morePosts={morePosts} />
-    </div>
+        <section className="w-full flex-center flex-col mt-10">
+        <h1 className="head_text text-center border-t-slate-800">
+            Explore and Wonder
+            <br className="max-md:hidden"/>
+            <br />
+
+        </h1>
+        <h2 className="head2_text text-center indigo_gradient">Javascript-Powered Portfolio</h2>
+        <p className="desc text-center">Portfolia is a NextJS and Tailwind project to showcase the body of work by Carlo Sulayao of D-Kolektiv, Inc.</p>
+            <Feed/>
+    </section>
   );
 }
