@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
 
@@ -10,7 +12,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        satoshi: ["Satoshi", "sans-serif"],
+        //sans: ["var(--font-inter)"],
+        inter: ["Inter", "sans-serif"],
+      },
+      colors: {
+        "primary-orange": "#FF5722",
+        "primary-indigo": "#4338ca", //secondary indigo #6366f1
       },
     },
   },
