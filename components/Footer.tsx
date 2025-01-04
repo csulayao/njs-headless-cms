@@ -15,9 +15,8 @@ const Footer = () => {
         <Link href="https://www.linkedin.com/in/carlosulayao" className="flex mr-5 mt-5" rel="noopener noreferrer" target="_blank">
           <Image src="https://portfolia-dusky.vercel.app/assets/icons/linkedin.svg" 
           alt="LinkedIn" width={28} height={28} className="mr-3" unoptimized={true} loader={() => "https://portfolia-dusky.vercel.app/assets/icons/linkedin.svg"}/>
-          Test
         </Link>
-        {/* <Link href="https://github.com/csulayao" className="flex mr-10 mt-5" rel="noopener noreferrer" target="_blank"><Image src="assets/icons/github.svg" alt="Github" width={30} height={30} className="mr-3"/></Link> */}
+        <Link href="https://github.com/csulayao" className="flex mr-10 mt-5" rel="noopener noreferrer" target="_blank"><Image src="https://portfolia-dusky.vercel.app/assets/icons/github.svg" alt="Github" width={30} height={30} className="mr-3" unoptimized={true} loader={() => "https://portfolia-dusky.vercel.app/assets/icons/github.svg"}/></Link>
         </div>
       {/* Mobile */}
       {/* <div className="sm:hidden flex">
