@@ -22,7 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* TODO: Fix the favico bit */}
+        <link rel="icon" href="/icon/?<generated>" type="image/<generated>" sizes="<generated>"/>
+        <link rel="apple-touch-icon" href="/apple-icon.png?<generated>" type="image/<generated>" sizes="<generated>"/>
+      </head>
       <body>
+
         <section className="min-h-screen">
           <main>{children}</main>
           <Footer />
