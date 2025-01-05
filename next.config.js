@@ -9,6 +9,11 @@ module.exports = {
         hostname: "portfolia-dusky.vercel.app",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+        pathname: "**",
+      },
     ],
   },
 };
