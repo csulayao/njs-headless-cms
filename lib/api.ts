@@ -31,6 +31,7 @@ const POST_GRAPHQL_FIELDS = `
 const GET_GRAPHQL_MENU =` 
   navName
   navLink
+  navAlt
   navImage{
     url
   }
