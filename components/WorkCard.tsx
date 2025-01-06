@@ -2,29 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 const WorkCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
-  const { data: session } = useSession();
-  const pathName = usePathname();
-  const router = useRouter();
-
-  const [copied, setCopied] = useState("");
-
-  const handleProfileClick = () =>{
-    if(post.creator._id === session?.user.id) return router.push("/profile");
-
-      //router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
-    window.open(post.workurl,'_blank');
-
-  }
-
-  const handleCopy = () => {
-    setCopied(post.workurl);
-    navigator.clipboard.writeText(post.workurl);
-    setTimeout(() => setCopied(""), 3000);
-  }
 
   return (
     <div className="work_card">
@@ -51,22 +31,6 @@ const WorkCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
         onClick={() => handleTagClick && handleTagClick(post.tag)}>
         {post.tag}
       </p>
-      {session?.user.id === post.creator._id && pathName === '/profile' &&
-        (
-          <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
-            <p 
-              className="font-inter text-sm orange_gradient cursor-pointer"
-              onClick={handleEdit}>
-              Edit
-            </p>
-            <p 
-              className="font-inter text-sm text-gray-500 cursor-pointer"
-              onClick={handleDelete}>
-              Delete
-            </p>
-          </div>
-        )
-      }
     </div>
   )
 }
