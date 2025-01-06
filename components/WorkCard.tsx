@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -30,9 +29,7 @@ const WorkCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
   return (
     <div className="work_card">
       <div className="flex justify-between items-start gap-5">
-        <div className="flex justify-start items-center gap-3" 
-          onClick={handleProfileClick}
-          >
+        <div className="flex justify-start items-center gap-3">
             <div className="flex flex-col align-top">
               <h3 className="font-satoshi font-semibold text-indigo-950">
                 {post.worktitle}
