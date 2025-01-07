@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from 'react'
+import Works from './lib/works'
 
 import WorkCard from './WorkCard';
 
 type WorkCardListProps = {
-  data: [],
+  data: [{}],
   handleTagClick: string
 }
 
