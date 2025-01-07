@@ -27,14 +27,6 @@ async function fetchGraphQLMenu(query: string, preview = false): Promise<any> {
   ).then((response) => response.json());
 }
 
-function extractPost(fetchResponse: any): any {
-  return fetchResponse?.data?.postCollection?.items?.[0];
-}
-
-function extractPostEntries(fetchResponse: any): any[] {
-  return fetchResponse?.data?.postCollection?.items;
-}
-
 //EXTRACT MENU ENTRIES
 function extractProjectEntries(fetchResponse: any): any[] {
   return fetchResponse?.data?.menuItemsCollection?.items;
