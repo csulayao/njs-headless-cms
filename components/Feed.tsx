@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import WorkCard from './WorkCard';
 
 type WorkCardListProps = {
-  data: string,
+  data: [],
   handleTagClick: string
 }
 
