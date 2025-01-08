@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from 'react'
-import Works from './lib/works'
+import { getAllProjectItems } from '@/lib/works';
 
 import WorkCard from './WorkCard';
 
 type WorkCardListProps = {
-  data: [{}],
+  data: [],
   handleTagClick: string
 }
 
@@ -15,7 +15,7 @@ const WorkCardList = ({data, handleTagClick}:WorkCardListProps) => {
     <div className="mt-5 work_layout cursor-pointer">
       {data.map((post) => (
         <WorkCard
-          key={post._id}
+          key={post.projectId}
           post={post}
           handleTagClick={handleTagClick}
         />
