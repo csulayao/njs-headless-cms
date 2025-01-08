@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const WorkCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
+const WorkCard = ({post, handleTagClick}) => {
 
   return (
     <div className="work_card">
