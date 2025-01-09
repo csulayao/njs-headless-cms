@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const WorkCard = ({post, handleTagClick}) => {
+const WorkCard = ({post}) => {
 
   return (
     <div className="work_card">
@@ -27,8 +27,7 @@ const WorkCard = ({post, handleTagClick}) => {
             </div>
         </div>
       </div>
-      <p className="font-inter text-sm tag_gradient pt-3"
-        onClick={() => handleTagClick && handleTagClick(post.tag)}>
+      <p className="font-inter text-sm tag_gradient pt-3">
         {post.tag}
       </p>
     </div>
