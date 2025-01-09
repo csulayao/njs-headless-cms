@@ -7,17 +7,16 @@ import WorkCard from './WorkCard';
 
 type WorkCardListProps = {
   data: [],
-  handleTagClick: string
 }
 
-const WorkCardList = ({data, handleTagClick}:WorkCardListProps) => {
+const WorkCardList = ({data, }:WorkCardListProps) => {
   return (
     <div className="mt-5 work_layout cursor-pointer">
       {data.map((post) => (
         <WorkCard
           key={post.projectId}
           post={post}
-          handleTagClick={handleTagClick}
+          //handleTagClick={handleTagClick}
         />
       ))}
       {/* {data.map((post) => (
