@@ -34,11 +34,11 @@ export default function RootLayout({
           <div className="gradient" />
       </div>
       <main className="app">
-          <Nav/>
+        <Nav/>
           {children}
       </main>
       </section>
-      <Footer />
+        <Footer />
       </body>
     </html>
   );
