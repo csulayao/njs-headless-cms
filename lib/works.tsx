@@ -1,10 +1,13 @@
 const GET_GRAPHQL_PROJECTS =` 
-  navName
-  navLink
-  navAlt
-  navImage{
-    url
-  }
+  projectId
+      projectName
+      projectUrl
+      projectTag
+      projectImageCollection{
+      	items{
+          url
+        }  
+      }
 `
 
 //GET PORTFOLIO ITEMS API CALL
