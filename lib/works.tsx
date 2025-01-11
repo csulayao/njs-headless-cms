@@ -8,7 +8,7 @@ const GET_GRAPHQL_PROJECTS =`
 `
 
 //GET PORTFOLIO ITEMS API CALL
-async function fetchGraphQLMenu(query: string, preview = false): Promise<any> {
+async function fetchGraphQLProjects(query: string, preview = false): Promise<any> {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -27,16 +27,16 @@ async function fetchGraphQLMenu(query: string, preview = false): Promise<any> {
   ).then((response) => response.json());
 }
 
-//EXTRACT MENU ENTRIES
+//EXTRACT Project ENTRIES
 function extractProjectEntries(fetchResponse: any): any[] {
-  return fetchResponse?.data?.menuItemsCollection?.items;
+  return fetchResponse?.data?.portofolioCollection?.items;
 }
 
-//GET ALL MENU ITEMS 
+//GET ALL Project ITEMS 
 export async function getAllProjectItems(): Promise<any[]> {
-  const entries = await fetchGraphQLMenu(
+  const entries = await fetchGraphQLProjects(
     `query {
-      menuItemsCollection{
+      portofolioCollection{
         items {
           ${GET_GRAPHQL_PROJECTS}
         }
