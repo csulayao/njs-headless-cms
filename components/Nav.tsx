@@ -38,8 +38,6 @@ export default async function Nav(){
                     &nbsp;{items.navName}
                 </Link>
                 ))}
-                {/* <Link className="icon_btn" href="https://www.linkedin.com/in/carlosulayao" rel="noopener noreferrer" target="_blank"><Image src="https://images.ctfassets.net/oxmmme2a1mec/5k17trG5fAgk1RiSLbfIzj/db14f305f653073acd1858a3cebd4143/linkedin.svg" alt="LinkedIn" width={28} height={28} className="mr-3" unoptimized={true} loader={() => "https://images.ctfassets.net/oxmmme2a1mec/5k17trG5fAgk1RiSLbfIzj/db14f305f653073acd1858a3cebd4143/linkedin.svg"}/>LinkedIn</Link>
-                <Link className="icon_btn mr-5" href="https://github.com/csulayao" rel="noopener noreferrer" target="_blank"><Image src="https://images.ctfassets.net/oxmmme2a1mec/4vrivkZnC1ySFVEf2PAa0S/a4013183a51d2e8b961987b669ef9b57/github.svg" alt="Github" width={30} height={30} className="mr-3" unoptimized={true} loader={() => "https://images.ctfassets.net/oxmmme2a1mec/4vrivkZnC1ySFVEf2PAa0S/a4013183a51d2e8b961987b669ef9b57/github.svg"}/> GitHub</Link> */}
             </div>
         </div>
 
