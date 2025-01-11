@@ -3,7 +3,7 @@ const GET_GRAPHQL_PROJECTS =`
       projectName
       projectUrl
       projectTag
-      projectImageCollection{
+      projectImageCollection(limit:1){
       	items{
           url
         }  
