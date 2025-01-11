@@ -9,7 +9,7 @@ type WorkCardListProps = {
   data: [],
 }
 
-const WorkCardList = ({data, }:WorkCardListProps) => {
+const WorkCardList = ({data}: WorkCardListProps) => {
   return (
     <div className="mt-5 work_layout cursor-pointer">
       {data.map((post) => (
@@ -26,8 +26,12 @@ const WorkCardList = ({data, }:WorkCardListProps) => {
   )
 }
 
-const Feed = () => {
+//Get all the posts
+export default async function Feed() {
   const [posts, setPosts] = useState([]);
+  const allMenu = await getAllProjectItems();
+  const allItems = allMenu
+  console.log(allItems)
 
 useEffect(() => {
   const fetchPosts = async () => {
@@ -48,5 +52,3 @@ useEffect(() => {
     </section>
   )
 }
-
-export default Feed
