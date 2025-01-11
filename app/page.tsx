@@ -9,9 +9,6 @@ export default async function Page() {
   const allPosts = await getAllPosts(isEnabled);
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
-  const allMenu = await getAllMenuItems();
-  const allItems = allMenu
-  console.log(allItems)
 
   return (
         <section className="w-full flex-center flex-col mt-10">
@@ -23,7 +20,7 @@ export default async function Page() {
         </h1>
         <h2 className="head2_text text-center indigo_gradient">CMS-Powered Portfolio</h2>
         <p className="desc text-center">This site is a Contentful, NextJS and Tailwind project to showcase the body of work by Carlo Sulayao of D-Kolektiv, Inc.</p>
-            <Feed/>
+            {/* <Feed/> */}
     </section>
   );
 }
