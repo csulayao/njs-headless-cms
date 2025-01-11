@@ -1,6 +1,5 @@
-"use client";
+"use client"
 
-//import { useState, useEffect } from 'react'
 import { getAllProjectItems } from '@/lib/works';
 import Image from "next/image";
 import Link from "next/link";
@@ -27,6 +26,15 @@ import Link from "next/link";
 //     </div>
 //   )
 // }
+
+type imageLoaderProps = {
+  src: string,
+  width: number,
+  quality: number
+}
+const imageLoader = ({ src, width, quality}: imageLoaderProps) => {
+  return `${src}?w=${width}}&q=${quality || 99}`
+}
 
 //Get all the posts
 export default async function Feed() {
@@ -57,16 +65,16 @@ export default async function Feed() {
                         {projects.projectName}
                       </h3>
                       <p className="font-inter text-sm text-gray-500 cursor-pointer">
-                        <Link href={projects.projectUrl} target="_blank" rel="noopener noreferrer">{projects.projectUrl}</Link>
+                        <Link href={projects.projectUrl} target="_blank" rel="noopener noreferrer" title={projects.projectName}>{projects.projectUrl}</Link>
                       </p>
-                      <Image 
-                        src={projects.projectImageCollection.items.url}
+                      <Image
+                        key={projects.projectId} 
+                        src={projects.projectImageCollection.items[0].url}
                         width={400}
                         height={700}
-                        alt="placeholder_image"
+                        alt={projects.projectName}
                         className="pt-5"
-                        unoptimized={true} 
-                        loader={() => `"${projects.projectUrl}"`}
+                        unoptimized={true} loader={() => `"${projects.projectImageCollection[0].url}"`}
                       />
                     </div>
                 </div>
