@@ -20,7 +20,7 @@ export default async function Page() {
         </h1>
         <h2 className="head2_text text-center indigo_gradient">CMS-Powered Portfolio</h2>
         <p className="desc text-center">This site is a Contentful, NextJS and Tailwind project to showcase the body of work by Carlo Sulayao of D-Kolektiv, Inc.</p>
-            {/* <Feed/> */}
+            <Feed/>
     </section>
   );
 }
