@@ -45,10 +45,6 @@ export default async function Feed() {
 //   fetchPosts();
 // }, []);
 
-  const runThru = () => {
-
-  }
-
   return (
     <section className="feed">
       <div className="mt-5 work_layout cursor-pointer">
