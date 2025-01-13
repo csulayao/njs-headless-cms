@@ -80,7 +80,10 @@ export default async function Feed() {
                 </div>
               </div>
               <p className="font-inter text-sm tag_gradient pt-3">
-                {projects.projectTag}
+                {/* {projects.projectTag} */}
+                {projects.projectTag.map((tag:string) => (
+                  <span>{tag}&nbsp;</span>
+                ))}
               </p>
           </div>
       ))}
