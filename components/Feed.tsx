@@ -49,7 +49,8 @@ export default async function Feed() {
     <section className="feed">
       <div className="mt-5 work_layout cursor-pointer">
          {allItems.map((projects) => (
-            <div className="work_card">
+            <div className="work_card"                         
+              key={projects.projectId} >
               <div className="flex justify-between items-start gap-5">
                 <div className="flex justify-start items-center gap-3">
                     <div className="flex flex-col align-top">
