@@ -28,15 +28,6 @@ import Link from "next/link";
 //   )
 // }
 
-type imageLoaderProps = {
-  src: string,
-  width: number,
-  quality: number
-}
-const imageLoader = ({ src, width, quality}: imageLoaderProps) => {
-  return `${src}?w=${width}}&q=${quality || 99}`
-}
-
 //Get all the posts
 export default async function Feed() {
   //const [posts, setPosts] = useState([]);
@@ -66,7 +57,7 @@ export default async function Feed() {
                         {projects.projectName}
                       </h3>
                       <p className="font-inter text-sm text-gray-500 cursor-pointer">
-                        <Link href={projects.projectUrl} target="_blank" rel="noopener noreferrer" title={projects.projectName}>{projects.projectUrl}</Link>
+                      <Link href={projects.projectUrl} target="_blank" rel="noopener noreferrer" title={projects.projectName}>{projects.projectUrl}</Link>
                       </p>
                       <Image
                         key={projects.projectId} 
@@ -81,9 +72,8 @@ export default async function Feed() {
                 </div>
               </div>
               <p className="flex flex-wrap font-inter text-sm tag_gradient pt-3">
-                {/* {projects.projectTag} */}
                 {projects.projectTag.map((tag:string) => (
-                  <span className="mr-1">{tag}</span>
+                  <span className="mr-1" key={tag[0]}>{tag}</span>
                 ))}
               </p>
           </div>
