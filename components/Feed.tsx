@@ -45,6 +45,10 @@ export default async function Feed() {
 //   fetchPosts();
 // }, []);
 
+  const runThru = () => {
+
+  }
+
   return (
     <section className="feed">
       <div className="mt-5 work_layout cursor-pointer">
@@ -73,8 +77,9 @@ export default async function Feed() {
                 </div>
               </div>
               <p className="flex flex-wrap font-inter text-sm tag_gradient pt-3">
-                {projects.projectTag.map((tag:string) => (
-                  <span className="mr-1" key={tag[0]}>{tag}</span>
+                {projects.projectTag.map((tag:string, i:string) => (
+
+                  <span className="mr-1" key={i}>{tag}</span>
                 ))}
               </p>
           </div>
