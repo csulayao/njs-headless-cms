@@ -1,6 +1,7 @@
 "use client"
 
 import { getAllProjectItems } from '@/lib/works';
+import { id } from 'date-fns/locale';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,10 +80,10 @@ export default async function Feed() {
                     </div>
                 </div>
               </div>
-              <p className="font-inter text-sm tag_gradient pt-3">
+              <p className="flex flex-wrap font-inter text-sm tag_gradient pt-3">
                 {/* {projects.projectTag} */}
                 {projects.projectTag.map((tag:string) => (
-                  <span>{tag}&nbsp;</span>
+                  <span className="mr-1">{tag}</span>
                 ))}
               </p>
           </div>
