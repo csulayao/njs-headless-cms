@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 
 export const metadata = {
-  title: `Next.js and Contentful Example`,
-  description: `This is a blog built with Next.js and Contentful.`,
+  title: `Portfolio powered by Contentful and NextJS`,
+  description: `This is a site built with Next.js and Contentful.`,
 };
 
 const inter = Inter({
