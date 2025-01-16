@@ -41,7 +41,6 @@ export default async function Feed() {
   //const [posts, setPosts] = useState([]);
   const allProjects = await getAllProjectItems();
   const allItems = allProjects
-  console.log(allItems)
 
 // useEffect(() => {
 //   const fetchPosts = async () => {
