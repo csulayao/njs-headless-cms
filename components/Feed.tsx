@@ -34,16 +34,6 @@ export default async function Feed() {
   const allProjects = await getAllProjectItems();
   const allItems = allProjects
 
-// useEffect(() => {
-//   const fetchPosts = async () => {
-//     const response = await fetch('/lib/works');
-//     const data = await response.json();
-
-//     setPosts(data);
-//   }
-//   fetchPosts();
-// }, []);
-
   return (
     <section className="feed">
       <div className="mt-5 work_layout cursor-pointer">
@@ -60,7 +50,6 @@ export default async function Feed() {
                       <Link href={projects.projectUrl} target="_blank" rel="noopener noreferrer" title={projects.projectName}>{projects.projectUrl}</Link>
                       </p>
                       <Image
-                        key={projects.projectId} 
                         src={projects.projectImageCollection.items[0].url}
                         width={400}
                         height={700}
