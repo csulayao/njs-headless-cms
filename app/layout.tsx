@@ -15,6 +15,11 @@ const inter = Inter({
   display: "swap",
 });
 
+const favicon = {
+  name: "Fav Icon",
+  url: "https://assets.ctfassets.net/oxmmme2a1mec/2JXxca9uhaDPSuIyyB1DtF/7d574d01db3204945fc09536231f467d/favicon.ico"
+}
+
 
 export default function RootLayout({
   children,
@@ -27,7 +32,7 @@ export default function RootLayout({
         {/* TODO: Fix the favico bit */}
         {/* <link rel="icon" href="/icon/?<generated>" type="image/<generated>" sizes="<generated>"/>
         <link rel="apple-touch-icon" href="/apple-icon.png?<generated>" type="image/<generated>" sizes="<generated>"/> */}
-        <link rel="icon" href="/favicon.ico" sizes="<generated>" />
+        <link rel="icon" href={favicon.url} sizes="<generated>" />
       </head>
       <body>
       <section>
