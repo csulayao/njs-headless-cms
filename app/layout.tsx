@@ -21,7 +21,6 @@ const favicon = {
   url: "https://assets.ctfassets.net/oxmmme2a1mec/2JXxca9uhaDPSuIyyB1DtF/7d574d01db3204945fc09536231f467d/favicon.ico"
 }
 
-
 export default function RootLayout({
   children,
 }: {
