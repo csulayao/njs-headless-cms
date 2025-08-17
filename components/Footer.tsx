@@ -21,7 +21,7 @@ const Footer = () => {
       {/* Mobile */}
       <div className="sm:hidden flex">
             <div className="w-full">
-              <span className="w-full">&copy; D-Kolektiv, Inc. 2024 <br /><br />
+              <span className="w-full">&copy; D-Kolektiv, Inc. 2025 <br /><br />
               </span>
 
             </div>
